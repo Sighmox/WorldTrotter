@@ -15,6 +15,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad(){
         super.viewDidLoad()
         
+        print("ConversionViewController loaded it's view")
+        
         updateCelsiusLabel()
     }
     // Checks if there is already a decimal and prevents additional decimal points
