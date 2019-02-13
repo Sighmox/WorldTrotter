@@ -45,6 +45,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    // Custom pin color
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKPointAnnotation {
+            let pinAnnotation = MKPinAnnotationView()
+            pinAnnotation.pinTintColor = UIColor.orange
+            pinAnnotation.annotation = annotation
+            pinAnnotation.canShowCallout = true
+            return pinAnnotation
+        }
+        return nil
+    }
+    
+    
+    
     func reverseGeocodeComplete(location: CLPlacemark) {
         let locationString = "\(location)"
         print(locationString)
@@ -56,7 +70,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     //This function prevents pins from being placed too close to each other
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    @IBAction func addCurrentLocationMarker(_ sender: Any) {
         if let location = locationManager.location {
             
             let closeAnootation = mapView.annotations
@@ -65,10 +79,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             if closeAnootation.count > 1 {
                 print("Another pin locaiton is too close. New pin will not be added!")
-                
+                return
             }
         }
-        return nil
+        
     }
     
     // This adds the date and time
@@ -78,19 +92,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         df.timeStyle = .short
         return df
     }()
-    /*
-   // Custom pin color
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotation? {
-        if annotation is MKPointAnnotation {
-            let pinAnnotation = MKPinAnnotationView()
-            pinAnnotation.pinTintColor = UIColor.orange
-            pinAnnotation.annotation = annotation
-            return pinAnnotation
-        }
-        return nil
-    }
-*/
     
+   
         // Checks if the user authorized location services and if they didn't displays a message
         func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
             if status == .authorizedWhenInUse {

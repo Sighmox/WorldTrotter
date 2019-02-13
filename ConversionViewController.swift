@@ -13,12 +13,34 @@ import UIKit
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad(){
+        
+        darkenMode()
         super.viewDidLoad()
+        
         
         print("ConversionViewController loaded it's view")
         
         updateCelsiusLabel()
     }
+    
+    func darkenMode()
+    {
+        let darkColor = UIColor(red: 51/255, green: 52/255, blue: 50/255, alpha: 1.0)
+        let greyColor = UIColor(red: 238/255, green: 240/255, blue: 239/255, alpha: 1.0)
+        let darkHour = NSCalendar.current.component(.hour, from: NSDate() as Date)
+        
+        switch darkHour {
+        case 1...25:
+            view.backgroundColor = darkColor
+        case 26...48:
+            view.backgroundColor = greyColor
+        case 49...60:
+            view.backgroundColor = darkColor
+        default:
+            break
+        }
+    }
+    
     // Checks if there is already a decimal and prevents additional decimal points
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,

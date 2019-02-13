@@ -13,8 +13,8 @@
 		75866CE52200EE5A001B5B90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75866CE32200EE5A001B5B90 /* LaunchScreen.storyboard */; };
 		75866CF02200EE5B001B5B90 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75866CEF2200EE5B001B5B90 /* WorldTrotterTests.swift */; };
 		75866CFB2200EE5B001B5B90 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75866CFA2200EE5B001B5B90 /* WorldTrotterUITests.swift */; };
-		795F46612203C14300F6F356 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795F46602203C14300F6F356 /* ConversionViewController.swift */; };
 		796F5A08221340860077E81D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F5A07221340860077E81D /* ViewController.swift */; };
+		799BFAF2221383F7002A8C89 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799BFAF1221383F7002A8C89 /* ConversionViewController.swift */; };
 		79AF6B7C22135946004A1657 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF6B7B22135946004A1657 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +48,8 @@
 		75866CF62200EE5B001B5B90 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75866CFA2200EE5B001B5B90 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		75866CFC2200EE5B001B5B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		795F46602203C14300F6F356 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = WorldTrotter/ConversionViewController.swift; sourceTree = "<group>"; };
 		796F5A07221340860077E81D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		799BFAF1221383F7002A8C89 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		79AF6B7B22135946004A1657 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +81,7 @@
 		75866CCE2200EE58001B5B90 = {
 			isa = PBXGroup;
 			children = (
-				795F46602203C14300F6F356 /* ConversionViewController.swift */,
+				799BFAF1221383F7002A8C89 /* ConversionViewController.swift */,
 				75866CD92200EE58001B5B90 /* WorldTrotter */,
 				75866CEE2200EE5B001B5B90 /* WorldTrotterTests */,
 				75866CF92200EE5B001B5B90 /* WorldTrotterUITests */,
@@ -262,8 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799BFAF2221383F7002A8C89 /* ConversionViewController.swift in Sources */,
 				796F5A08221340860077E81D /* ViewController.swift in Sources */,
-				795F46612203C14300F6F356 /* ConversionViewController.swift in Sources */,
 				75866CDB2200EE58001B5B90 /* AppDelegate.swift in Sources */,
 				79AF6B7C22135946004A1657 /* MapViewController.swift in Sources */,
 			);
