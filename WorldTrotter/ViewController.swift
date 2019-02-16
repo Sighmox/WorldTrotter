@@ -105,7 +105,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 alert.addAction(UIAlertAction(title: "OK",
                                               style: .default,
                                               handler: { (action: UIAlertAction) -> Void in UIApplication.shared.open(URL(string:
-                                                UIApplicationOpenSettingsURLString)!) } ))
+                                                UIApplication.openSettingsURLString)!) } ))
                 present(alert, animated: true, completion: nil)
                 
             }

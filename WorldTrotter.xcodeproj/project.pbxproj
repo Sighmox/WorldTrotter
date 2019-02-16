@@ -14,7 +14,9 @@
 		75866CF02200EE5B001B5B90 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75866CEF2200EE5B001B5B90 /* WorldTrotterTests.swift */; };
 		75866CFB2200EE5B001B5B90 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75866CFA2200EE5B001B5B90 /* WorldTrotterUITests.swift */; };
 		796F5A08221340860077E81D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796F5A07221340860077E81D /* ViewController.swift */; };
+		79835A682218944200176A76 /* WebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79835A672218944200176A76 /* WebViewPage.swift */; };
 		799BFAF2221383F7002A8C89 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799BFAF1221383F7002A8C89 /* ConversionViewController.swift */; };
+		799BFAF72216274B002A8C89 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799BFAF62216274B002A8C89 /* WebKit.framework */; };
 		79AF6B7C22135946004A1657 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF6B7B22135946004A1657 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +51,9 @@
 		75866CFA2200EE5B001B5B90 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		75866CFC2200EE5B001B5B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796F5A07221340860077E81D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79835A672218944200176A76 /* WebViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPage.swift; sourceTree = "<group>"; };
 		799BFAF1221383F7002A8C89 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		799BFAF62216274B002A8C89 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		79AF6B7B22135946004A1657 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799BFAF72216274B002A8C89 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,7 @@
 				75866CEE2200EE5B001B5B90 /* WorldTrotterTests */,
 				75866CF92200EE5B001B5B90 /* WorldTrotterUITests */,
 				75866CD82200EE58001B5B90 /* Products */,
+				799BFAF52216274B002A8C89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +110,7 @@
 			children = (
 				75866CDA2200EE58001B5B90 /* AppDelegate.swift */,
 				75866CDE2200EE58001B5B90 /* Main.storyboard */,
+				79835A672218944200176A76 /* WebViewPage.swift */,
 				796F5A07221340860077E81D /* ViewController.swift */,
 				79AF6B7B22135946004A1657 /* MapViewController.swift */,
 				75866CE12200EE5A001B5B90 /* Assets.xcassets */,
@@ -129,6 +136,14 @@
 				75866CFC2200EE5B001B5B90 /* Info.plist */,
 			);
 			path = WorldTrotterUITests;
+			sourceTree = "<group>";
+		};
+		799BFAF52216274B002A8C89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				799BFAF62216274B002A8C89 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,13 +214,16 @@
 				TargetAttributes = {
 					75866CD62200EE58001B5B90 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					75866CEA2200EE5B001B5B90 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 75866CD62200EE58001B5B90;
 					};
 					75866CF52200EE5B001B5B90 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 75866CD62200EE58001B5B90;
 					};
 				};
@@ -265,6 +283,7 @@
 				799BFAF2221383F7002A8C89 /* ConversionViewController.swift in Sources */,
 				796F5A08221340860077E81D /* ViewController.swift in Sources */,
 				75866CDB2200EE58001B5B90 /* AppDelegate.swift in Sources */,
+				79835A682218944200176A76 /* WebViewPage.swift in Sources */,
 				79AF6B7C22135946004A1657 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PB.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -463,7 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PB.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -482,7 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PB.WorldTrotterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldTrotter.app/WorldTrotter";
 			};
@@ -502,7 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PB.WorldTrotterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldTrotter.app/WorldTrotter";
 			};
@@ -521,7 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PB.WorldTrotterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WorldTrotter;
 			};
@@ -540,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PB.WorldTrotterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = WorldTrotter;
 			};

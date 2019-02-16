@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 // Updates the celsius label when app opens
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     
